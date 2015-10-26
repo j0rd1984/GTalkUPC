@@ -25,7 +25,7 @@ import java.util.List;
 public class AuthRequestFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
-        if (requestContext.getUriInfo().getPath().equals("myresource") && requestContext.getMethod().equals("GET"))
+        if(Authorized.getInstance().isAuthorized(requestContext))
             return;
 
         final boolean secure = requestContext.getUriInfo().getAbsolutePath().getScheme().equals("https");
