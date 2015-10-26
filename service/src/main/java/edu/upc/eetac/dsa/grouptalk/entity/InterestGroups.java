@@ -1,5 +1,7 @@
 package edu.upc.eetac.dsa.grouptalk.entity;
 
+import org.glassfish.jersey.linking.InjectLinks;
+
 import javax.ws.rs.core.Link;
 import java.util.List;
 
@@ -13,7 +15,6 @@ public class InterestGroups {
     private String id;
     private String userid;
     private String creator;
-    private String subject;
     private String content;
     private long creationTimestamp;
     private long lastModified;
@@ -49,14 +50,6 @@ public class InterestGroups {
 
     public void setCreator(String creator) {
         this.creator = creator;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
     }
 
     public String getContent() {

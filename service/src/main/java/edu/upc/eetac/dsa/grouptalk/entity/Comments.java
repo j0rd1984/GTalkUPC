@@ -1,5 +1,7 @@
 package edu.upc.eetac.dsa.grouptalk.entity;
 
+import org.glassfish.jersey.linking.InjectLinks;
+
 import javax.ws.rs.core.Link;
 import java.util.List;
 
@@ -12,7 +14,6 @@ public class Comments {
     private String id;
     private String userid;
     private String creator;
-    private String subject;
     private String content;
     private String ThemeID;
     private long creationTimestamp;
@@ -54,13 +55,6 @@ public class Comments {
         this.creator = creator;
     }
 
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
 
     public String getContent() {
         return content;
