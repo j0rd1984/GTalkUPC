@@ -84,7 +84,7 @@ public class ThemesResource {
 
         ThemesDAO themesDAO = new ThemesDAOImpl();
         try {
-            themes = themesDAO.updateThemes(id, themes.getSubject(), themes.getContent());
+            themes = themesDAO.updateThemes(id, themes.getContent());
             if(themes == null)
                 throw new NotFoundException("Theme with id = "+id+" doesn't exist");
         } catch (SQLException e) {

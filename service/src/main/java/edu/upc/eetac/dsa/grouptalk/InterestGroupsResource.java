@@ -6,6 +6,7 @@ import edu.upc.eetac.dsa.grouptalk.entity.AuthToken;
 import edu.upc.eetac.dsa.grouptalk.entity.InterestGroups;
 import edu.upc.eetac.dsa.grouptalk.entity.InterestGroupsCollection;
 
+import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.net.URI;
@@ -20,6 +21,7 @@ public class InterestGroupsResource {
     @Context
     private SecurityContext securityContext;
     @POST
+    @RolesAllowed("admin")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(GrouptalkMediaType.GROUPTALK_InterestGroups)
     public Response createInterestGroups(@FormParam("content") String content, @Context UriInfo uriInfo) throws URISyntaxException {

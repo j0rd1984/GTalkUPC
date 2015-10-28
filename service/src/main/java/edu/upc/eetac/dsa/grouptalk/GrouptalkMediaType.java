@@ -14,5 +14,6 @@ public interface GrouptalkMediaType {
         public final static String GROUPTALK_InterestGroups = "application/vnd.dsa.grouptalk.interestgroups+json";
         public final static String GROUPTALK_InterestGroups_COLLECTION = "application/vnd.dsa.grouptalk.interestgroups.collection+json";
         public final static String GROUPTALK_ROOT = "application/vnd.dsa.grouptalk.root+json";
+        public final static String GROUPTALK_JoinGroup = "application/vnd.dsa.grouptalk.joingroup+json";
 
 }

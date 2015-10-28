@@ -12,6 +12,6 @@ public interface ThemesDAO {
     public Themes createThemes(String userid, String subject, String content, String interestgroupid) throws SQLException;
     public Themes getThemesById(String id) throws SQLException;
     public ThemesCollection getThemes() throws SQLException;
-    public Themes updateThemes(String id, String subject, String content) throws SQLException;
+    public Themes updateThemes(String id, String content) throws SQLException;
     public boolean deleteThemes(String id) throws SQLException;
 }

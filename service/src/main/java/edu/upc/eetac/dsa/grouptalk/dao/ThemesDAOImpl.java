@@ -115,7 +115,7 @@ public class ThemesDAOImpl implements ThemesDAO {
     }
 
     @Override
-    public Themes updateThemes(String id, String subject, String content) throws SQLException {
+    public Themes updateThemes(String id, String content) throws SQLException {
         Themes Themes = null;
 
         Connection connection = null;
@@ -124,9 +124,8 @@ public class ThemesDAOImpl implements ThemesDAO {
             connection = Database.getConnection();
 
             stmt = connection.prepareStatement(ThemesDAOQuery.UPDATE_Themes);
-            stmt.setString(1, subject);
-            stmt.setString(2, content);
-            stmt.setString(3, id);
+            stmt.setString(1, content);
+            stmt.setString(2, id);
 
             int rows = stmt.executeUpdate();
             if (rows == 1)
