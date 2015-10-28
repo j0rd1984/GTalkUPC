@@ -19,12 +19,12 @@ public class Themes {
     private String creator;
     private String subject;
     private String content;
-    private String InterestGroupID;
+    private String interestgroupid;
     private long creationTimestamp;
     private long lastModified;
 
-    public String getInterestGroupID() {
-        return InterestGroupID;
+    public String getInterestgroupid() {
+        return interestgroupid;
     }
 
     public List<Link> getLinks() {
@@ -91,7 +91,7 @@ public class Themes {
         this.lastModified = lastModified;
     }
 
-    public void setInterestGroupID(String interestGroupID) {
-        InterestGroupID = interestGroupID;
+    public void setInterestgroupid(String interestGroupid) {
+        interestgroupid = interestgroupid;
     }
 }

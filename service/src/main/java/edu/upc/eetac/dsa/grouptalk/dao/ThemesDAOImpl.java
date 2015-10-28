@@ -13,7 +13,7 @@ import java.sql.SQLException;
  */
 public class ThemesDAOImpl implements ThemesDAO {
     @Override
-    public Themes createThemes(String userid, String subject, String content) throws SQLException {
+    public Themes createThemes(String userid, String subject, String content, String interestgroupid) throws SQLException {
         Connection connection = null;
         PreparedStatement stmt = null;
         String id = null;
@@ -32,6 +32,7 @@ public class ThemesDAOImpl implements ThemesDAO {
             stmt.setString(2, userid);
             stmt.setString(3, subject);
             stmt.setString(4, content);
+            stmt.setString(5, interestgroupid);
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw e;
@@ -65,6 +66,7 @@ public class ThemesDAOImpl implements ThemesDAO {
                 Themes.setCreator(rs.getString("fullname"));
                 Themes.setSubject(rs.getString("subject"));
                 Themes.setContent(rs.getString("content"));
+                Themes.setInterestgroupid(rs.getString("interestgroupid"));
                 Themes.setCreationTimestamp(rs.getTimestamp("creation_timestamp").getTime());
                 Themes.setLastModified(rs.getTimestamp("last_modified").getTime());
             }
@@ -101,7 +103,7 @@ public class ThemesDAOImpl implements ThemesDAO {
                     first = false;
                 }
                 stingCollection.setOldestTimestamp(Themes.getLastModified());
-                stingCollection.getStings().add(Themes);
+                stingCollection.getThemes().add(Themes);
             }
         } catch (SQLException e) {
             throw e;

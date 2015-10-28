@@ -99,7 +99,7 @@ public class InterestGroupsDAOImpl  implements InterestGroupsDAO{
                     first = false;
                 }
                 InterestGroupsCollection.setOldestTimestamp(InterestGroups.getLastModified());
-                InterestGroupsCollection.getStings().add(InterestGroups);
+                InterestGroupsCollection.getInterestgroups().add(InterestGroups);
             }
         } catch (SQLException e) {
             throw e;

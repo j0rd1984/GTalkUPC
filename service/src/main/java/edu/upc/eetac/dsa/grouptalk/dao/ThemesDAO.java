@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * Created by Jordi on 26/10/2015.
  */
 public interface ThemesDAO {
-    public Themes createThemes(String userid, String subject, String content) throws SQLException;
+    public Themes createThemes(String userid, String subject, String content, String interestgroupid) throws SQLException;
     public Themes getThemesById(String id) throws SQLException;
     public ThemesCollection getThemes() throws SQLException;
     public Themes updateThemes(String id, String subject, String content) throws SQLException;

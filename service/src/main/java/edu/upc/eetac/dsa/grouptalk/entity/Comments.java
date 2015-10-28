@@ -17,12 +17,12 @@ public class Comments {
     private String userid;
     private String creator;
     private String content;
-    private String ThemeID;
+    private String themeid;
     private long creationTimestamp;
     private long lastModified;
 
-    public String getThemeID() {
-        return ThemeID;
+    public String getThemeid() {
+        return themeid;
     }
 
     public List<Link> getLinks() {
@@ -82,7 +82,7 @@ public class Comments {
         this.lastModified = lastModified;
     }
 
-    public void setThemeID(String themeID) {
-        ThemeID = themeID;
+    public void setThemeid(String themeid) {
+        this.themeid = themeid;
     }
 }

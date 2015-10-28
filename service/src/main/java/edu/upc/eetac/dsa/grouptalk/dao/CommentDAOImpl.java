@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class CommentDAOImpl implements CommentsDAO{
 
     @Override
-    public Comments createComments(String userid, String content) throws SQLException {
+    public Comments createComments(String userid, String content, String themeid) throws SQLException {
         Connection connection = null;
         PreparedStatement stmt = null;
         String id = null;
@@ -32,6 +32,7 @@ public class CommentDAOImpl implements CommentsDAO{
             stmt.setString(1, id);
             stmt.setString(2, userid);
             stmt.setString(3, content);
+            stmt.setString(4, themeid);
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw e;
@@ -64,6 +65,7 @@ public class CommentDAOImpl implements CommentsDAO{
                 comments.setUserid(rs.getString("userid"));
                 comments.setCreator(rs.getString("fullname"));
                 comments.setContent(rs.getString("content"));
+                comments.setThemeid(rs.getString("themeid"));
                 comments.setCreationTimestamp(rs.getTimestamp("creation_timestamp").getTime());
                 comments.setLastModified(rs.getTimestamp("last_modified").getTime());
             }
@@ -99,7 +101,7 @@ public class CommentDAOImpl implements CommentsDAO{
                     first = false;
                 }
                 CommentsCollection.setOldestTimestamp(Comments.getLastModified());
-                CommentsCollection.getStings().add(Comments);
+                CommentsCollection.getComments().add(Comments);
             }
         } catch (SQLException e) {
             throw e;

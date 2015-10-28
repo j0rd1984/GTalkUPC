@@ -16,7 +16,7 @@ public class CommentsCollection {
     private List<Link> links;
     private long newestTimestamp;
     private long oldestTimestamp;
-    private List<Comments> stings = new ArrayList<>();
+    private List<Comments> comments = new ArrayList<>();
 
     public List<Link> getLinks() {
         return links;
@@ -42,11 +42,11 @@ public class CommentsCollection {
         this.oldestTimestamp = oldestTimestamp;
     }
 
-    public List<Comments> getStings() {
-        return stings;
+    public List<Comments> getComments() {
+        return comments;
     }
 
-    public void setStings(List<Comments> stings) {
-        this.stings = stings;
+    public void setComments(List<Comments> comments) {
+        this.comments = comments;
     }
 }

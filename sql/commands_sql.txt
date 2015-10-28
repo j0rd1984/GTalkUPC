@@ -1,0 +1,7 @@
+Backup:
+mysqldump -u root -p Tutorials > tut_backup.sql
+
+Restore:
+mysql -u root -p Tutorials < tut_backup.sql
+
+Donde Tutorials es el nombre de la DATABASE

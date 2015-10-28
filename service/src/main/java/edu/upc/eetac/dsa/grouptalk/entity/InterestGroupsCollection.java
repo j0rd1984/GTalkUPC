@@ -16,7 +16,7 @@ public class InterestGroupsCollection {
     private List<Link> links;
     private long newestTimestamp;
     private long oldestTimestamp;
-    private List<InterestGroups> stings = new ArrayList<>();
+    private List<InterestGroups> interestgroups = new ArrayList<>();
 
     public List<Link> getLinks() {
         return links;
@@ -42,11 +42,11 @@ public class InterestGroupsCollection {
         this.oldestTimestamp = oldestTimestamp;
     }
 
-    public List<InterestGroups> getStings() {
-        return stings;
+    public List<InterestGroups> getInterestgroups() {
+        return interestgroups;
     }
 
-    public void setStings(List<InterestGroups> stings) {
-        this.stings = stings;
+    public void setInterestgroups(List<InterestGroups> interestgroups) {
+        this.interestgroups = interestgroups;
     }
 }

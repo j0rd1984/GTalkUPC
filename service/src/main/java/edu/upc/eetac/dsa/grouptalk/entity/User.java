@@ -12,6 +12,7 @@ import java.util.List;
 /**
  * Created by Jordi on 25/10/2015.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
     @InjectLinks({})
     private List<Link> links;
