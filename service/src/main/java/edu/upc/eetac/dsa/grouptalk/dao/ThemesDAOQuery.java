@@ -10,4 +10,5 @@ public interface ThemesDAOQuery {
     public final static String GET_Themes = "select hex(id) as id, hex(userid) as userid, subject, creation_timestamp, last_modified from themes";
     public final static String UPDATE_Themes = "update themes set content=? where id=unhex(?) ";
     public final static String DELETE_Themes = "delete from themes where id=unhex(?)";
+    public final static String Subscribed = "select count(*) from user_group where userid=unhex(?) and interestgroup=unhex(?)";
 }

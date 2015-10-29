@@ -10,4 +10,5 @@ public interface CommentDAOQuery {
     public final static String GET_COMMENTS = "select hex(id) as id, hex(userid) as userid, creation_timestamp, last_modified from comments";
     public final static String UPDATE_COMMENT = "update comments set content=? where id=unhex(?) ";
     public final static String DELETE_COMMENT = "delete from comments where id=unhex(?)";
+    public final static String Subscribed = "select count(*) from user_group where userid=unhex(?) and interestgroup in (select interestgroupid from themes where id=unhex(?))";
 }

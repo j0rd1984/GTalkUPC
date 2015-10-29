@@ -69,6 +69,7 @@ public class InterestGroupsResource {
     }
     @Path("/{id}")
     @PUT
+    @RolesAllowed("admin")
     @Consumes(GrouptalkMediaType.GROUPTALK_InterestGroups)
     @Produces(GrouptalkMediaType.GROUPTALK_InterestGroups)
     public InterestGroups updateInterestGroups(@PathParam("id") String id, InterestGroups interestGroups) {
@@ -93,6 +94,7 @@ public class InterestGroupsResource {
     }
     @Path("/{id}")
     @DELETE
+    @RolesAllowed("admin")
     public void deleteInterestGroups(@PathParam("id") String id) {
         String userid = securityContext.getUserPrincipal().getName();
         InterestGroupsDAO interestGroupsDAO = new InterestGroupsDAOImpl();

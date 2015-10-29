@@ -17,6 +17,15 @@ public class UserGroup {
 
     private String userid;
     private String GroupID;
+    private int count;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     public List<Link> getLinks() {
         return links;

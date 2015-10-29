@@ -17,10 +17,24 @@ public class ThemesDAOImpl implements ThemesDAO {
         Connection connection = null;
         PreparedStatement stmt = null;
         String id = null;
+        int columns = 1;
         try {
             connection = Database.getConnection();
 
-            stmt = connection.prepareStatement(UserDAOQuery.UUID);
+            stmt = connection.prepareStatement(ThemesDAOQuery.Subscribed);
+            stmt.setString(1, userid);
+            stmt.setString(2, interestgroupid);
+            ResultSet rc = stmt.executeQuery();
+            if (rc.next())
+                columns = rc.getInt(1);
+            else
+                throw new SQLException();
+
+            if (columns == 0) {
+                throw new SQLException();
+            }
+
+            stmt = connection.prepareStatement(ThemesDAOQuery.UUID);
             ResultSet rs = stmt.executeQuery();
             if (rs.next())
                 id = rs.getString(1);
@@ -159,4 +173,5 @@ public class ThemesDAOImpl implements ThemesDAO {
             if (connection != null) connection.close();
         }
     }
+
 }

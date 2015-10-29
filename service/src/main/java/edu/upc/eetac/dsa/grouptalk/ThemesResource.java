@@ -1,13 +1,7 @@
 package edu.upc.eetac.dsa.grouptalk;
 
-import edu.upc.eetac.dsa.grouptalk.dao.CommentDAOImpl;
-import edu.upc.eetac.dsa.grouptalk.dao.CommentsDAO;
-import edu.upc.eetac.dsa.grouptalk.dao.ThemesDAO;
-import edu.upc.eetac.dsa.grouptalk.dao.ThemesDAOImpl;
-import edu.upc.eetac.dsa.grouptalk.entity.AuthToken;
-import edu.upc.eetac.dsa.grouptalk.entity.Comments;
-import edu.upc.eetac.dsa.grouptalk.entity.Themes;
-import edu.upc.eetac.dsa.grouptalk.entity.ThemesCollection;
+import edu.upc.eetac.dsa.grouptalk.dao.*;
+import edu.upc.eetac.dsa.grouptalk.entity.*;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
@@ -42,6 +36,8 @@ public class ThemesResource {
     @GET
     @Produces(GrouptalkMediaType.GROUPTALK_Themes_COLLECTION)
     public ThemesCollection getThemes(){
+
+
         ThemesCollection themesCollection = null;
         ThemesDAO themesDAO = new ThemesDAOImpl();
         try {
@@ -57,6 +53,7 @@ public class ThemesResource {
     @GET
     @Produces(GrouptalkMediaType.GROUPTALK_Themes)
     public Themes getThemes(@PathParam("id") String id){
+
         Themes themes = null;
         ThemesDAO themesDAO = new ThemesDAOImpl();
         try {
