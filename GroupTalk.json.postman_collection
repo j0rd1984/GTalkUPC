@@ -1,0 +1,329 @@
+{
+	"id": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+	"name": "GroupTalk",
+	"description": "",
+	"order": [
+		"32683aeb-a0d8-3d05-c266-7c9daef133d6",
+		"c0e9ba0f-4184-71e8-73b6-9b8ab1214cf8",
+		"39485cd6-77b6-4dbe-7c93-ce8d70db98ed",
+		"f6beffbf-61f3-cec6-1806-2f77f5be98b2",
+		"b6ca0040-cdca-a8dd-3593-659f330f2667",
+		"ce2b92e8-c868-b51a-244e-1f574b5f6571",
+		"9666a6de-90c4-fa20-6193-63fa6c4438b9",
+		"42c9e0d6-3253-8f85-16fe-7ca053130673",
+		"26ec60c5-7d5b-d9b9-45fa-a952407ccbdd",
+		"5817634f-5e2e-2716-e95d-beb6f6673eb9",
+		"be988158-d83f-48a7-1d40-257d51c237ac"
+	],
+	"folders": [],
+	"timestamp": 1445784348075,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "26ec60c5-7d5b-d9b9-45fa-a952407ccbdd",
+			"headers": "X-Auth-Token: 08587AD57BF911E5B402002318A56C8C\n",
+			"url": "http://localhost:8090/grouptalk/themes/34A2B5787D8F11E5914C002318A56C8C",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"data": [],
+			"dataMode": "params",
+			"name": "GET Theme",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1446077616411,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "32683aeb-a0d8-3d05-c266-7c9daef133d6",
+			"headers": "",
+			"url": "http://localhost:8090/grouptalk/users",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "loginid",
+					"value": "test",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "1234",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "test@grouptalk.dsa.upc.edu",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "fullname",
+					"value": "test user",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1445881856877,
+			"name": "Create User",
+			"description": "",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"responses": []
+		},
+		{
+			"id": "39485cd6-77b6-4dbe-7c93-ce8d70db98ed",
+			"headers": "X-Auth-Token: 18af58607c0a11e5b148002318a56c8c\nContent-Type: application/vnd.dsa.grouptalk.user+json\n",
+			"url": "http://localhost:8090/grouptalk/users/18ABD9A27C0A11E5B148002318A56C8C",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1445882208353,
+			"name": "Update User",
+			"description": "",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"responses": [],
+			"rawModeData": "{\r\n  \"id\": \"18ABD9A27C0A11E5B148002318A56C8C\",\r\n  \"loginid\": \"test\",\r\n  \"email\": \"test_user@test.com\",\r\n  \"fullname\": \"Test fullname\"\r\n}"
+		},
+		{
+			"id": "42c9e0d6-3253-8f85-16fe-7ca053130673",
+			"headers": "X-Auth-Token: 08587AD57BF911E5B402002318A56C8C\n",
+			"url": "http://localhost:8090/grouptalk/joingroup",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "userid",
+					"value": "08541D047BF911E5B402002318A56C8C",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "groupid",
+					"value": "1293BB0D7D8C11E5914C002318A56C8C",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446074220451,
+			"name": "Go Out Group",
+			"description": "",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"responses": []
+		},
+		{
+			"id": "5817634f-5e2e-2716-e95d-beb6f6673eb9",
+			"headers": "X-Auth-Token: 39788B947D9411E5914C002318A56C8C\n",
+			"url": "http://localhost:8090/grouptalk/comments/08587AD57BF911E5B402002318A56C8C",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"data": [],
+			"dataMode": "params",
+			"name": "GET Comments",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1446149653530,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9666a6de-90c4-fa20-6193-63fa6c4438b9",
+			"headers": "X-Auth-Token: 08587AD57BF911E5B402002318A56C8C\n",
+			"url": "http://localhost:8090/grouptalk/joingroup",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "userid",
+					"value": "08541D047BF911E5B402002318A56C8C",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "groupid",
+					"value": "1293BB0D7D8C11E5914C002318A56C8C",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446073342745,
+			"name": "Join Group",
+			"description": "",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"responses": []
+		},
+		{
+			"id": "b6ca0040-cdca-a8dd-3593-659f330f2667",
+			"headers": "X-Auth-Token: 08587AD57BF911E5B402002318A56C8C\n",
+			"url": "http://localhost:8090/grouptalk/themes",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "content",
+					"value": "Multiplayer online battle arena game",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "subject",
+					"value": "League of Legueds",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "interestgroupid",
+					"value": "6A33819C7DB511E5B067002318A56C8C",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446065507472,
+			"name": "Create Theme",
+			"description": "",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"responses": []
+		},
+		{
+			"id": "be988158-d83f-48a7-1d40-257d51c237ac",
+			"headers": "X-Auth-Token: 39788B947D9411E5914C002318A56C8C\n",
+			"url": "http://localhost:8090/grouptalk/groups/620FBD9F7DBD11E5B067002318A56C8C",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"data": [],
+			"dataMode": "params",
+			"name": "GET Group",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1446149685915,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "c0e9ba0f-4184-71e8-73b6-9b8ab1214cf8",
+			"headers": "X-Auth-Token: E0A0B21F728A11E589D2002318A56C8C\n",
+			"url": "http://localhost:8090/grouptalk/users/5F81678D7BF911E5B402002318A56C8C",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"data": [],
+			"dataMode": "params",
+			"name": "Get User Info",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1445874950718,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "ce2b92e8-c868-b51a-244e-1f574b5f6571",
+			"headers": "X-Auth-Token: 08587AD57BF911E5B402002318A56C8C\n",
+			"url": "http://localhost:8090/grouptalk/comments",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "content",
+					"value": "Ya he comprado mis entradas para el pre estreno que ganas",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "themeid",
+					"value": "34A2B5787D8F11E5914C002318A56C8C",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446049421263,
+			"name": "Create Comment",
+			"description": "",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"responses": []
+		},
+		{
+			"id": "f6beffbf-61f3-cec6-1806-2f77f5be98b2",
+			"headers": "X-Auth-Token: 08587AD57BF911E5B402002318A56C8C\n",
+			"url": "http://localhost:8090/grouptalk/groups",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "content",
+					"value": "Peliculas",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446048344806,
+			"name": "Create Group",
+			"description": "",
+			"collectionId": "04edfb87-ff5c-26ba-c62d-7ffd633be890",
+			"responses": []
+		}
+	]
+}
